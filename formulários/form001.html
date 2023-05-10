@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <p><label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label>
+            <input type="text" name="isobrenome" id="isobrenome"></p>
+        <p><input type="submit" value="Enviar!"></p>
+    </form>
+
+    <!--
+        0. O formulário acima não é o ideal, mas já é um começo;
+        1.Todo formulário deve estar entre a tag <form>;
+        2. Ao digitar input:text no VS Code, ele criará uma caixinha que permite digitar dentro;
+        3. Ao digitar input:submit, será criado um botão para submeter, ou seja, enviar o formulário;
+        4. action="documento . ..." dentro da tag form enviará o formulário para um banco de dados da sua escolha; 
+        5.autocomplete="off" dentro da tag form desliga a sugestão de autopreenchimento do formulário;
+        6. Todo input deve ter seu 'name' e 'id' sempre designados, porque isso será importante para as linguagens que os dados serão enviados. 'name' é útil para html e php e 'id' mais para JavaScript;
+        7. O label serve para atrelar o formulário ao o que está sendo pedido. No 'for' SEMPRE informe o ID=" " do input;
+        8. method="post" dentro da tag form faz com que as informações do fomulário não vão para a url, mas dentro do inspecionar elemento é possível encontrar. O padrão é method="get";
+        9. Use o method get quando você estiver pedindo dados não sensíveis, ou seja: nome, peso, altura, fotos, arquivos... Use o method post quando você pedir senhas, email, cpf, nome completo, cartão de crédito...;
+        10. Get só envia até 3 mil bytes, mais ou menos 3 mil letras. Acha que vai passar disso no formulário inteiro? Utilize o method post.-->
+</body>
+</html>
